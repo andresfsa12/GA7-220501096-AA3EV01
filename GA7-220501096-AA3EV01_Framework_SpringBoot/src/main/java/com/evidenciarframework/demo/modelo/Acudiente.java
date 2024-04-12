@@ -32,8 +32,6 @@ public class Acudiente {
 		PASSWORD = pASSWORD;
 	}
 
-
-
 	public int getID() {
 		return ID;
 	}

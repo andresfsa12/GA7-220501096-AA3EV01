@@ -3,15 +3,20 @@ package com.evidenciarframework.demo.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.evidenciarframework.demo.interfaces.IAcudiente;
 import com.evidenciarframework.demo.interfaceservice.IAcudienteService;
 import com.evidenciarframework.demo.modelo.Acudiente;
 
 public class AcudienteService implements IAcudienteService{
-
+	
+	@Autowired
+	private IAcudiente data;
 	@Override
 	public List<Acudiente> listar() {
 		// TODO Auto-generated method stub
-		return null;
+		return (List<Acudiente>)data.findAll();
 	}
 
 	@Override

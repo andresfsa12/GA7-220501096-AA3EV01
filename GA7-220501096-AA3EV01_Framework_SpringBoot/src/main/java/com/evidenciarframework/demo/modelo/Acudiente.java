@@ -14,7 +14,7 @@ public class Acudiente {
 	private int ID;
 	private String NOMBRE;
 	private String APELLIDO;
-	private int N_CELULAR;
+	private String N_CELULAR;
 	private String DIRECCION;
 	private String PASSWORD;
 	
@@ -22,7 +22,7 @@ public class Acudiente {
 		
 	}
 
-	public Acudiente(int iD, String nOMBRE, String aPELLIDO, int n_CELULAR, String dIRECCION, String pASSWORD) {
+	public Acudiente(int iD, String nOMBRE, String aPELLIDO, String n_CELULAR, String dIRECCION, String pASSWORD) {
 		super();
 		ID = iD;
 		NOMBRE = nOMBRE;
@@ -56,11 +56,11 @@ public class Acudiente {
 		APELLIDO = aPELLIDO;
 	}
 
-	public int getN_CELULAR() {
+	public String getN_CELULAR() {
 		return N_CELULAR;
 	}
 
-	public void setN_CELULAR(int n_CELULAR) {
+	public void setN_CELULAR(String n_CELULAR) {
 		N_CELULAR = n_CELULAR;
 	}
 

@@ -1,10 +1,10 @@
 package com.evidenciarframework.demo.controler;
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -25,5 +25,14 @@ public class Controlador {
 		model.addAttribute("Acudientes",Acudientes);
 		return "index";
 	}
-		
+
+	@GetMapping("/new")
+	public String agregar(Model model) {
+		model.addAttribute("acudiente",new Acudiente());
+		return "AcudienteForm";
+	}
+	public String save(@Validated Acudiente p, Model model) {
+		service.save(p);
+		return "redirect:/listar";
+	}
 }
